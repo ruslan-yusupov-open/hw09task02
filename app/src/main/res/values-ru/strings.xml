@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator Example</string>
+    <string name="my_app">Мое приложение.</string>
+    <string name="title_activity_edit_text">EditText</string>
+    <string name="save">Сохранить</string>
+    <string name="main_page">Главная страница!</string>
+    <string name="settings">Настройки</string>
+    <string name="notebook">Записная книжка</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="main">Главная</string>
+    <string name="choose_lang">Выберите язык:</string>
+
+    <string-array name="langs">
+        <item>Русский</item>
+        <item>English</item>
+    </string-array>
+</resources>
