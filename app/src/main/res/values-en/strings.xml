@@ -10,6 +10,9 @@
     <string name="calculator">Calculator</string>
     <string name="main">Main</string>
     <string name="choose_lang">Select language:</string>
+    <string name="toSimple">To simple view</string>
+    <string name="toScience">To science view</string>
+    <string name="selectColor">Выберите цвет:</string>
 
     <string-array name="langs">
         <item>Русский</item>

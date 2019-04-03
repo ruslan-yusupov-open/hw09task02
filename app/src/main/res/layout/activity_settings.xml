@@ -39,8 +39,24 @@
             android:id="@+id/spinner_lang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:entries="@array/langs">
         </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="@string/selectColor"/>
+
+        <Spinner
+            android:id="@+id/spinner_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:entries="@array/colors"
+            />
     </LinearLayout>
 
 </FrameLayout>

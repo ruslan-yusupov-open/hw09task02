@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ public class CalculatorActivity extends AppCompatActivity {
     Button butDiv;
     Button butMult;
     Button butEq;
+    Button butPm;
 
     Button butPoint;
 
@@ -59,6 +61,7 @@ public class CalculatorActivity extends AppCompatActivity {
         but8 = findViewById(R.id.but8);
         but9 = findViewById(R.id.but9);
         but0 = findViewById(R.id.but0);
+        butPm = findViewById(R.id.butPM);
         butPoint = findViewById(R.id.but_point);
 
         butC = findViewById(R.id.but_c);
@@ -82,6 +85,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
         butC.setOnClickListener(view -> {
             num = 0.0;
+            numM = 0.0;
+            pointMode = false;
             text.setText(num.toString());
         });
 
@@ -90,9 +95,32 @@ public class CalculatorActivity extends AppCompatActivity {
         butDiv.setOnClickListener(view -> actionClick("div"));
         butMult.setOnClickListener(view -> actionClick("mult"));
         butEq.setOnClickListener(view -> actionClick("eq"));
+        butPm.setOnClickListener(view -> actionClick("pm"));
+
+        Button butToComplex = findViewById(R.id.button_complex);
+        Button butToSimple = findViewById(R.id.button_simple);
+        View view1 = findViewById(R.id.layout_1);
+        View view2 = findViewById(R.id.layout_2);
+
+        butToComplex.setOnClickListener(view -> {
+            view1.setVisibility(View.GONE);
+            view2.setVisibility(View.VISIBLE);
+        });
+
+
+        butToSimple.setOnClickListener(view -> {
+            view2.setVisibility(View.GONE);
+            view1.setVisibility(View.VISIBLE);
+        });
     }
 
     private void actionClick(String action) {
+        if ("pm".equals(action)) {
+            num = -num;
+            text.setText(num.toString());
+            return;
+        }
+
         if ("plus".equals(currentAction)) {
             num = numM + num;
         }
@@ -121,6 +149,11 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     private void numClick(int value) {
+        if (num.toString().length() > 9) {
+            Toast.makeText(CalculatorActivity.this, "слишком много цифр", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if (pointMode) {
             num = num + value / (Math.pow(10, digitsAfterPoint++));
         } else {

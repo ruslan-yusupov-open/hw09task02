@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".SettingsActivity">
 
     <android.support.v7.widget.Toolbar
@@ -22,11 +24,39 @@
             android:textSize="36sp" />
     </android.support.v7.widget.Toolbar>
 
-    <Spinner
-        android:id="@+id/spinner_lang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/langs">
-    </Spinner>
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="@string/choose_lang"/>
+        <Spinner
+            android:id="@+id/spinner_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:entries="@array/langs">
+        </Spinner>
 
-</android.support.constraint.FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="@string/selectColor"/>
+
+        <Spinner
+            android:id="@+id/spinner_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:entries="@array/colors"
+            />
+    </LinearLayout>
+
+</FrameLayout>
