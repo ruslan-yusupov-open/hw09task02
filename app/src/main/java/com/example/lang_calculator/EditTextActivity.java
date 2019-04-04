@@ -22,6 +22,7 @@ public class EditTextActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_edit_text);
 
         Toolbar myToolbar = findViewById(R.id.my_toolbar);

@@ -13,6 +13,7 @@
     <string name="toSimple">To simple view</string>
     <string name="toScience">To science view</string>
     <string name="selectColor">Выберите цвет:</string>
+    <string name="selectIndent">Выберите отступ</string>
 
     <string-array name="langs">
         <item>Русский</item>
