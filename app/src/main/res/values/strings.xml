@@ -12,16 +12,15 @@
     <string name="toSimple">К ОБЫЧНОМУ ВИДУ</string>
     <string name="toScience">К ИНЖЕНЕРНОМУ ВИДУ</string>
     <string name="selectColor">Выберите цвет:</string>
-    <string name="selectIndent">Выберите отступ</string>
 
     <string-array name="langs">
         <item>Русский</item>
         <item>English</item>
     </string-array>
 
-    <string-array name="margins" tools:ignore="InconsistentArrays">
-        <item>Малый</item>
-        <item>Средний</item>
-        <item>Большой</item>
+    <string-array name="colors" tools:ignore="InconsistentArrays">
+        <item>Черный</item>
+        <item>Зеленый</item>
+        <item>Синий</item>
     </string-array>
 </resources>
